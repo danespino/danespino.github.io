@@ -1,3 +1,23 @@
-body{
-    background-color: #402f5f !important;
+#socialtop{
+    display: none;
+}
+
+.slide-content{
+    padding-top: 150px;
+    min-height: 750px;
+    color: #313131;
+    background-color: #FEFEFE; 
+}
+
+@media (max-width: 575.98px){ 
+    .img-thumbnail {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+@media (min-width:666px){
+    #socialtop{
+        display: inline-block;
+    }
 }

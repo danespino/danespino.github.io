@@ -7,42 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Dan Espino&lsquo;s Porfolio - Bienvenido</title>
     <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=OPEN_SANS&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Noto+Serif+Display:wght@300;800&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="container">
-        <div class="row align-items-center my-4 py-5">
-            <div class="col-xs-12 col-sm-6 h-50 order-2 order-sm-1">
-                <p class="text-center fs-1 mt-2 mb-0"><i class="bi bi-exclamation-triangle-fill text-white"></i></p>
-                <p class="text-center text-white fs-1">Bajo construcci&oacute;n</p>
-                <p class="text-start text-white fs-4">Lo sentimos! Esta p&aacute;gina web se encuentra en
-                    construcci&oacute;n. Agradecemos tu visita, puedes obtener mayor informaci&oacute;n en cualquiera de las
-                    redes sociales.</p>
-                <p class="text-center text-white fs-5">Imagen extra&iacute;da de <a
-                        href="https://www.pngwing.com/es/free-png-bydap" target="_blank" class="link-light">pngwing</a></p>
-                <p class="text-center align-self-center py-3">
-                    <a href="https://www.facebook.com/dan.espino91/" class="btn btn-primary" target="_blank"><i class="bi bi-facebook fs-3 text-white"></i></a>
-                    <a href="https://twitter.com/danespino91" class="btn btn-info" target="_blank"><i class="bi bi-twitter fs-3 text-white"></i></a>
-                    <a href="https://www.linkedin.com/in/danespino91" class="btn btn-outline-primary bg-white" target="_blank"><i class="bi bi-linkedin fs-3 text-primary"></i></a>
-                    <a href="mailto:daniel.espino91sv@gmail.com" class="btn btn-outline-primary bg-warning" target="_blank"><i class="bi bi-envelope fs-3 text-light"></i></a>
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 h-50 order-1 order-sm-2 align-self-center">
-                <img class="img-fluid mx-auto d-block" src="assets/img/manworking.png">
-            </div>
+<body class="h-100">    
+    <nav id="navbar" class="navbar bg-dark navbar-dark navbar-expand-sm sticky-top">
+        <a href="/" class="navbar-brand"><img src="assets/img/logo.png" class="img-responsive"></a>
+        <ul id="myNavbar" class="navbar nav-pills nav-flush flex-nowrap mb-auto mx-auto text-end text-sm-center align-items-center  list-inline">
+            <li class="nav-item">
+                <a href="#start" class="nav-link active py-4 px-3 link-light text-center" title="Inicio" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Inicio">
+                    <i class="bi-house fs-3"></i><span class="d-none d-sm-inline ms-1">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#aboutme" class="nav-link py-4 px-3 link-light" title="Sobre Mi" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Sobre Dan">
+                    <i class="bi bi-file-earmark-person-fill fs-3"></i><span class="d-none d-sm-inline ms-1">Sobre Mi</span>
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio" class="nav-link py-4 px-3 link-light" title="Portafolio" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Portafolio">
+                   <i class="bi bi-code-square fs-3"></i><span class="d-none d-sm-inline ms-1">Portafolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link py-4 px-3 text-light" title="Contr&aacute;tame" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                    <i class="bi-people fs-3"></i><span class="d-none d-sm-inline ms-1">Contr&aacute;tame</span>
+                </a>
+            </li>
+        </ul>
+        <p id="socialtop" class="d-none d-md-inline align-self-end py-3 pe-md-2">
+            <a href="#" class="btn btn-primary" target="_blank"><i class="bi bi-facebook fs-6 text-white"></i></a>
+            <a href="#" class="btn btn-outline-primary bg-white " target="_blank"><i class="bi bi-linkedin fs-6 text-primary"></i></a>
+            <a href="#" class="btn btn-info d-none d-lg-inline" target="_blank"><i class="bi bi-twitter fs-6 text-white"></i></a>
+        </p>
+    </nav>
+       
+    <div id="start" class="container-fluid slide-content">
+        <h1>Section 1</h1>
+        <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+    </div>
+    <div id="aboutme" class="container-fluid slide-content">
+        <div class="row">
+            <div class="col-12 text-center text-dark fs-1">Acerca de Mi</div>
         </div>
-        <div class="row py-1">
-            <div class="col-12">
-                <p class="text-center text-white fs-5">&copy; 2022. Dan Espino</p>
+        <div class="row">
+            <div class="col-12 col-lg-3 text-center">
+                <img src="assets/img/profile.jpg" class="img-thumbnail" alt="">
+            </div>
+            <div class="col-12 offset-lg-0 col-lg-8 ">
+                <p class="fs-3 text-center text-sm-start">Web Developer &amp; Bachelor in Business Administration</p>
+                <p class="fst-italic">
+                    Soy una persona proactiva, determinado, resiliente, orientado al detalle, objetivos y al trabajo en equipo. Me inici&eacute; en la programaci&oacute;n a los 13 a&ntilde;os.
+                    Sin embargo, surgi&oacute; en mi el inter&eacute;s por dominar la Administraci&oacute;n de Empresas para integrar posteriormente mis conocimientos y habilidades en mi &aacute;rea de
+                    conocimiento.
+                </p>
+                <div class="row">
+                    <div class="col-lg-12 d-inline d-lg-none">
+                        <ul class="list-inline">
+                            <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Dic 1991</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>danespino.github.io</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <a href="mailto:daniel.espino91sv@gmail.com"
+                                    target="_blank" rel="noopener noreferrer"><span>daniel.espino91sv@gmail.com</span></a></li>
+                            <li><i class=" bi bi-chevron-right"></i> <strong>Ubicaci&oacute;n:</strong> <span>San Salvador, El Salvador
+                                        (SV)</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>30</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Grado Acad&eacute;mico:</strong> <span>Licenciado en Adm. de Empresas
+                                    (<abbr title="Bachelor in Business Administration" class="">BBA</abbr>)</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Disponible para Trabajo:</strong> <span>S&iacute;</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-inline d-xxl-inline">
+                        <ul class="list-inline">
+                            <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Dic 1991</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>danespino.github.io</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <a href="mailto:daniel.espino91sv@gmail.com" target="_blank" rel="noopener noreferrer"><span>daniel.espino91sv@gmail.com</span></a></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Ubicaci&oacute;n:</strong> <span>San Salvador, El Salvador (SV)</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-inline d-xxl-inline">
+                        <ul class="list-inline ">
+                            <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>30</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Grado Acad&eacute;mico:</strong> <span>Licenciado en Adm. de Empresas (<abbr title="Bachelor in Business Administration" class="">BBA</abbr>)</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Disponible para Trabajo:</strong> <span>S&iacute;</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <div id="portfolio" class="container-fluid slide-content">
+        <h1>Section 3</h1>
+        <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+    </div>
+    <div id="contact" class="container-fluid slide-content">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Add scrollspy to <body>
+                $('body').scrollspy({ target: "#navbar", offset: 50 });
+
+                // Add smooth scrolling on all links inside the navbar
+                $("#myNavbar li a").on('click', function (event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    }  // End if
+                });
+                window.location.hash = "start";
+            });
+    </script>
 </body>
 </html>
