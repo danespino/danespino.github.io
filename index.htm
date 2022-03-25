@@ -212,10 +212,8 @@
                 // deltaX: horizontal scroll
                 // deltaY: -1: Scroll Down, 1: Scroll Up
                 // deltaFactor: Delta from LastPosition - InitialPosition (Abs)
-                    
                 var lastMov = -(event.deltaY * event.deltaFactor); // Invert y values to understand as Top = 0
                 lastPos += lastMov;
-                    
 
                 //.offsetHeight It includes DIV size, .offsetTop sets where div begins on Y axis, %.offsetHeight to animation to be triggered
                 var divInfo = [];
@@ -238,6 +236,7 @@
                     sectionIndex = 3;
                 }
 
+                let endDivPos = divInfo[sectionIndex]["init"] + divInfo[sectionIndex]["jump"];
                 // Scrolling up  Top Relative(-)
                 if(lastMov<0){
                     //Fixing navigation error
@@ -249,17 +248,20 @@
                         });
                         lastPos+=iniPos;
                     }else{
-                        // Scrolling up on an element. Determine Position to animate properly
-                        console.log(sectionIndex);
                         if(sectionIndex>0){
-                            //let endDivPos = divInfo[sectionIndex]["init"] + divInfo[sectionIndex]["jump"];
                             //TO-DO: Check sectionIndex to be over 0 to create animation
+                            let triggerPos = endDivPos * 0.25;
+                            if(lastPos<=triggerPos){
+                                $('html, body').animate({
+                                    scrollTop: divInfo[sectionIndex-1]["init"]
+                                }, 525, "linear", function () {
+                                    $(divInfo[sectionIndex-1]["hash"]).click();
+                                });
+                            }
                         }
                     }
                 }else{
                     // Scrolling Down Top Relative (+)
-                    //console.log(sectionIndex);
-                    let endDivPos = divInfo[sectionIndex]["init"] + divInfo[sectionIndex]["jump"];
                     if(sectionIndex<divInfo.length-1&&lastPos>=endDivPos){
                         // For the first three elements
                         $('html, body').animate({
