@@ -1,282 +1,99 @@
+<!-- DESIGN INSPIRED ON META FACEBOOK, NOT FOR COMMERCIAL PURPOSES. CODED BY DAN ESPINO -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Dan A. Espino">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Dan Espino&lsquo;s Porfolio - Bienvenido</title>
-    <link rel="icon" href="assets/img/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="author" content="Dan Espino">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:: Dan Espino's Portfolio ::.</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Noto+Serif+Display:wght@300;800&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="assets/js/cvprofile.js"></script>
 </head>
-<body class="h-100">
+<body>
     <div id="preloader">
-       <span>Cargando sitio...</span>
-    </div>   
-    <nav id="navbar" class="navbar bg-dark navbar-dark navbar-expand-sm sticky-top">
-        <a href="#start" class="navbar-brand px-1 d-none d-sm-inline"><img src="assets/img/logo.png" class="d-none d-sm-inline"></a>
-        <ul id="topbar" class="navbar nav-pills nav-flush flex-nowrap mb-auto mx-auto text-xs-end text-sm-center align-items-center list-inline">
-            <li class="nav-item">
-                <a id="startnav" href="#start" class="nav-link active py-4 px-3 link-light text-center" title="Inicio" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Inicio">
-                    <i class="bi-house fs-4"></i><span class="d-none d-sm-inline ms-1">Inicio</span>
-                </a>
-            </li>
-            <li>
-                <a id="aboutmenav" href="#aboutme" class="nav-link py-4 px-3 link-light" title="Sobre Mi" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Sobre Dan">
-                    <i class="bi bi-file-earmark-person-fill fs-4"></i><span class="d-none d-sm-inline ms-1">Sobre Mi</span>
-                </a>
-            </li>
-            <li>
-                <a id="portfolionav" href="#portfolio" class="nav-link py-4 px-3 link-light" title="Portafolio" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Portafolio">
-                   <i class="bi bi-code-square fs-4"></i><span class="d-none d-sm-inline ms-1">Portafolio</span>
-                </a>
-            </li>
-            <li>
-                <a id="contactnav" href="#contact" class="nav-link py-4 px-3 text-light" title="Contr&aacute;tame" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-                    <i class="bi-people fs-4"></i><span class="d-none d-sm-inline ms-1">Contr&aacute;tame</span>
-                </a>
-            </li>
-        </ul>
-        <div id="socialtop" class="d-none d-md-inline-flex align-self-end py-4">
-            <a href="#" class="btn btn-primary mx-1" target="_blank"><i class="bi bi-facebook fs-6 text-white"></i></a>
-            <a href="#" class="btn btn-outline-primary bg-white mx-1" target="_blank"><i class="bi bi-linkedin fs-6 text-primary"></i></a>
-            <a href="#" class="btn btn-info mx-1 d-none d-lg-inline" target="_blank"><i class="bi bi-twitter fs-6 text-white"></i></a>
-        </div>
-    </nav>
-       
-    <section id="start" class="container-fluid slide-content">
-        <h1>Bienvenida</h1>
-        <p>Aquí se </p>
-    </section>
-    <section id="aboutme" class="container-fluid slide-content">
+        <div id="preloader-logo"></div>
+        <span id="preload-text">Cargando contenido...</span>
+    </div>
+    <div id="page-container" class="container">
         <div class="row">
-            <div class="col-12 text-center text-dark fs-1">Acerca de Mi <a href="#" class="btn btn-danger" title="Descargar CV" target="_blank"><i class="bi bi-file-earmark-pdf-fill fs-3 text-white"></i></a></div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-3 text-center">
-                <img src="assets/img/profile.jpg" class="img-thumbnail" alt="">
-            </div>
-            <div class="col-12 offset-lg-0 col-lg-8 ">
-                <p class="fs-3 text-center text-sm-start">Web Developer &amp; Bachelor of Business Administration</p>
-                <p class="fst-italic">
-                    Soy una persona proactiva, determinada, resiliente, enfocado en los detalles, objetivos y al trabajo en equipo. Me inici&eacute; en la programaci&oacute;n a los 15 a&ntilde;os.
-                    Sin embargo, surgi&oacute; en mi el inter&eacute;s por dominar la Administraci&oacute;n de Empresas para integrar posteriormente mis conocimientos y habilidades en esta &aacute;rea.
-                </p>
-                <p class="fst-italic">
-                    <strong>Datos Personales</strong>
-                </p>
-                <div class="row">
-                    <div class="col-lg-6 graldata">
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i><strong>Fecha de Nacimiento:</strong> <span>17 Dic 1991</span></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Sitio Web:</strong> <span><a href="https://danespino.github.io" target="_blank" rel="noopener noreferrer"> https://danespino.github.io</a></span></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Email:</strong><a href="mailto:daniel.espino91sv@gmail.com" target="_blank" rel="noopener noreferrer"><span>daniel.espino91sv@gmail.com</span></a></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Ubicaci&oacute;n:</strong> <span>San Salvador, El Salvador (SV)</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 graldata">
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i><strong>Edad:</strong> <span>30</span></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Grado Acad&eacute;mico:</strong> <span>Licenciado en Adm. de Empresas (<abbr title="Bachelor in Business Administration" class="">BBA</abbr>)</span></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Disponible para Trabajo:</strong> <span>S&iacute;</span></li>
-                            <li><i class="bi bi-chevron-right"></i><strong>Idiomas:</strong> <span>Ingl&eacute;s (C2), Español (Nativo)</span></li>
-                        </ul>
+            <div class="col-12 profile-header mx-auto">
+                <div class="profile-header-photo text-center"><img src="assets/img/header.jpg" alt=""></div>
+                <div class="profile-photo text-center">
+                    <img src="assets/img/profile.jpg" class="rounded-circle img-thumbnail profile-pic" alt="">
+                    <div id="profile_name" class="col-12">
+                        <p>Daniel Espino</p>
                     </div>
                 </div>
-                <p class="fst-italic">
-                    Actualmente no poseo una trayectoria en el &aacute;mbito laboral en el sector, pero cuento con un <a href="#portfolio" target="_self">Portafolios</a> que contiene proyectos que se actualizan regularmente y que permiten demostrar mis conocimientos. A continuaci&oacute;n hago menci&oacute;n de las habilidades a considerar:
-                </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-center text-dark fs-1">Habilidades</div>
-        </div>
-        <div class="row justify-content-evenly">
-            <div class="col-lg-5 skills">
-                <ul>
-                    <li>
-                        <span><strong>HTML</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>CSS3 - Bootstrap</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>PHP</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>JS - Jquery</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 60%;" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-5 skills">
-                <ul>
-                    <li>
-                        <span><strong>GIT & GitHub</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>Angular</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                75%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>Python</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                aria-valuemax="100">50%</div>
-                        </div>
-                    </li>
-                    <li>
-                        <span><strong>Ruby - Ruby on Rails</strong></span>
-                        <div class="progress">
-                            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                aria-valuemax="100">50%</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio" class="container-fluid slide-content adjust">
-        <div class="row">
-            <div class="col-12 text-center text-dark fs-1">&#161;Bienvenido a mi Portafolio!</div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center text-dark">
-                
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="container-fluid slide-content adjust">
-        <div class="row">
-            <div class="col-12 text-center text-dark fs-1">&#161;Ponte en Contacto!</div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                
-            </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript">
-        // Preloader animation while doc is ready
-        $(window).on("load", function () {
-            $('#preloader').fadeOut(1000, function () {
-                $('body').css('overflow', "visible");
-                if (window.location.hash==="") window.location.hash = "start"; // Redir to first tab automatically
-            });
-        });
-
-        $(document).ready(function() {
-            const iniPos = 120; // Declare initial position of first section element
-            var lastPos = iniPos, sectionIndex = 0, docSections = $("section").get();
-
-            $('body').scrollspy({ target: "#navbar", offset: 50 }); // Setting scrollspy
-
-            $("#topbar li a").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash; 
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 500, function () {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-                
-            $(window).mousewheel(function(event) {
-                //console.log(event.deltaX, event.deltaY, event.deltaFactor);
-                // deltaX: horizontal scroll
-                // deltaY: -1: Scroll Down, 1: Scroll Up
-                // deltaFactor: Delta from LastPosition - InitialPosition (Abs)
-                var lastMov = -(event.deltaY * event.deltaFactor); // Invert y values to understand as Top = 0
-                lastPos += lastMov;
-
-                //.offsetHeight It includes DIV size, .offsetTop sets where div begins on Y axis, %.offsetHeight to animation to be triggered
-                var divInfo = [];
-
-                docSections.forEach(function(value, index, element){
-                    divInfo.push({ "init": element[index].offsetTop, "height": element[index].offsetHeight, "end":element[index].offsetTop+element[index].offsetHeight, "jump":element[index].offsetHeight * 0.65, "hash": element[index].id});
-                });
-
-                // Flag System to detect when Div is about to reach end.
-                if(lastPos<=(divInfo[0]["init"]+divInfo[0]["end"])){
-                    sectionIndex = 0;
-                }else if(lastPos<=(divInfo[1]["init"]+divInfo[1]["end"])){
-                    sectionIndex = 1;
-                }else if(lastPos<=(divInfo[2]["init"]+divInfo[2]["end"])){
-                    sectionIndex = 2;
-                }else if(lastPos<(divInfo[3]["init"]+divInfo[3]["end"])){
-                    sectionIndex = 3;
-                }else if(lastPos>(divInfo[3]["end"]+divInfo[3]["init"])){
-                    lastPos=lastPos-lastMov;
-                    sectionIndex = 3;
-                }
-
-                let endDivPos = divInfo[sectionIndex]["init"] + divInfo[sectionIndex]["jump"];
-                // Scrolling up  Top Relative(-)
-                if(lastMov<0){
-                    //Fixing navigation error
-                    if(lastPos<=0){
-                        $('html, body').animate({
-                            scrollTop: $("#start").offset().top
-                        }, 125, "linear", function () {
-                            window.location.hash = "start";
-                        });
-                        lastPos+=iniPos;
-                    }else{
-                        if(sectionIndex>0){
-                            //TO-DO: Check sectionIndex to be over 0 to create animation
-                            let triggerPos = endDivPos * 0.25;
-                            if(lastPos<=triggerPos){
-                                $('html, body').animate({
-                                    scrollTop: divInfo[sectionIndex-1]["init"]
-                                }, 525, "linear", function () {
-                                    $(divInfo[sectionIndex-1]["hash"]).click();
-                                });
-                            }
-                        }
-                    }
-                }else{
-                    // Scrolling Down Top Relative (+)
-                    if(sectionIndex<divInfo.length-1&&lastPos>=endDivPos){
-                        // For the first three elements
-                        $('html, body').animate({
-                            scrollTop: divInfo[sectionIndex+1]["init"]
-                        }, 525, "linear", function () {
-                            $(divInfo[sectionIndex+1]["hash"]).click();
-                        });
-                    }
-                        
-            
-                }
-
-            });
-        });
         
-    </script>
+        <div class="row">
+            <div class="col-12 text-center mb-2 actions-bar">
+                <a href="http://" class="btn btn-primary" target="_self"><i class="bi bi-file-earmark-person-fill"></i>Download CV</a>
+                <a href="https://www.facebook.com/dan.espino91" class="btn btn-secondary" target="_blank"><i class="bi bi-chat-quote-fill"></i>Message Me</a>
+                <hr />
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#posts">Actualizaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#infousr">Informaci&oacute;n</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#portfolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item d-none d-md-inline">
+                        <a class="nav-link" data-toggle="tab" href="#usrstud">Formaci&oacute;n</a>
+                    </li>
+                    <li class="nav-item dropdown d-block d-md-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            M&aacute;s
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" role="presentation">
+                            <a class="dropdown-item" data-toggle="tab" href="#usrstud">Formaci&oacute;n</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="tab-content col-12 content">
+                    <div class="tab-pane container active" id="posts">
+                        <div class="row ">
+                            <div class="col-12 col-md-4 order-1 mt-md-3">
+                                <div class="box-content text-center">
+                                    <span>Redes Sociales</span>
+                                    <p class="text-center align-self-center py-2">
+                                        <a href="https://www.facebook.com/dan.espino91/" class="btn btn-primary" target="_blank"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="https://twitter.com/danespino91" class="btn btn-info" target="_blank"><i
+                                                class="bi bi-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/in/danespino91" class="btn btn-outline-primary bg-white"
+                                            target="_blank"><i class="bi bi-linkedin text-primary"></i></a>
+                                        <a href="mailto:daniel.espino91sv@gmail.com" class="btn btn-outline-primary bg-warning" target="_blank"><i
+                                                class="bi bi-envelope-paper-fill"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8 order-2 content">
+                                Publicaciones
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane container fade" id="infousr">User Information</div>
+                    <div class="tab-pane container fade" id="portfolio">Portfolio</div>
+                    <div class="tab-pane container fade" id="usrstud">Formaci&oacute;n</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>

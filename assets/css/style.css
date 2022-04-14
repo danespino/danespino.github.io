@@ -1,10 +1,13 @@
+/* < !-- DESIGN INSPIRED ON META FACEBOOK,
+NOT FOR COMMERCIAL PURPOSES. CODED BY DAN ESPINO --> */
 body{
+    background-color: #212121;
     overflow: hidden;
 }
 
 #preloader{
-    background: #212121 url("../img/preloadgo.gif") no-repeat center center;
-    background-size: 40%;
+    background: #313131 no-repeat center center;
+    background-size: 100%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -12,67 +15,115 @@ body{
     text-align: center;
 }
 
+#preloader-logo{
+    margin-top: 10%;
+}
+
+#eyeglass{
+    animation: eyerotate 1s infinite linear;
+    transform-origin: center;
+}
+
+@keyframes eyerotate {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
 #preloader span{
     color:#FEFEFE;
-    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 5vh;
     position: fixed;
     bottom: 10%;
-    margin-left: -3%;
+    margin-left: -5%;
 }
 
-#socialtop{
-    display: none;
+#page-container{
+    position: relative;
+    z-index: 0;
 }
 
-.graldata ul{
-    list-style: none;
-    padding: 0;
-}
-
-.graldata ul li{
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.graldata ul strong{
-    margin-right: 10px;
-}
-
-.slide-content{
+#profile_name{
+    color: #FEFEFE;
+    font-weight: 700;
+    font-size: 2em;
+    position: relative;
+    z-index: 10;
     margin-top: 10px;
-    padding-top: 150px;
-    margin-bottom: 50px;
-    min-height: 900px;
-    color: #313131;
-    background-color: #FEFEFE;
-    border: 1px #313131 solid;
 }
 
-.adjust{
-    padding-top: 200px !important;
+.actions-bar hr{
+    border-color: #727272;
+    border-width: 2px;
 }
 
-.skills ul{
-    list-style: none;
+.content{
+    color: aliceblue;
+    background: red;
 }
 
-.skills ul li{
-    padding: 2%;
-    list-style: none;
+.box-content{
+    width: 100%;
+    min-height: 40px;
+    border-radius: 0.25em;
+    background: #313131;
+    margin-bottom: 10px;
+    padding: 10px;    
 }
 
-@media (max-width: 575.98px){ 
-    body{
-        overflow-x: hidden;
+.box-content span{
+    color: #FEFEFE;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 346 x 941 */
+
+@media (max-width:575px){
+    #page-container, .row{
+        margin: 0px !important;
+        padding: 0px !important;
     }
-    .img-thumbnail {
-        max-width: 70%;
+
+    .profile-header{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .profile-header-photo{
+        width: 100%;
+        height: 360px;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+    }
+    
+    .profile-header-photo > img{
+        position:absolute;
+        left: -135%;
+        right: -100%;
+        top: -125%;
+        bottom: -100%;
+        margin: auto;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .profile-photo{
+        position: relative;
+        z-index: 10;
+        top:-150px;
+        margin-bottom: -150px;
+    }
+    
+    .profile-pic{
+        width: 50%;
         height: auto;
     }
 
-    .logobar{
-        min-width: calc(50%);
-        height: auto;
-    }
 }
