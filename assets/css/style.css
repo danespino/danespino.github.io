@@ -62,11 +62,6 @@ body{
     border-width: 2px;
 }
 
-.content{
-    color: aliceblue;
-    background: red;
-}
-
 .box-content{
     width: 100%;
     min-height: 40px;
