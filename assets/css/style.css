@@ -62,13 +62,16 @@ body{
     border-width: 2px;
 }
 
+i{
+    padding-right: 5px;
+}
+
 .box-content{
     width: 100%;
-    min-height: 40px;
     border-radius: 0.25em;
-    background: #313131;
     margin-bottom: 10px;
-    padding: 10px;    
+    background: #313131;
+    padding: 20px;
 }
 
 .box-content span{
@@ -92,7 +95,6 @@ body{
     border: 1px solid #FEFEFE;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    background: #323232;
     color: #495057;
 }
 
@@ -109,9 +111,32 @@ body{
 
 .box-content .tab-content>.active {
     display: block;
-    min-height: 165px;
+    float: right;
+    width: 66%;
     color: #FEFEFE;
-    font-size: 1.55em;
+    background: #313131;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.tab-content i{
+    font-size: 1.45em;
+    padding-right: 2%;
+    margin-top: 15px;
+}
+
+.titlesection{
+    font-size: 1.45em;
+    margin-bottom: 2px;
+}
+
+.elsection{
+    font-size: 1.25em;
+}
+
+.eldesc{
+    margin-left: 50px;
+    margin-top: -25px;
 }
 
 .box-content .nav.nav-tabs {
@@ -168,6 +193,49 @@ body{
 
     .box-content .nav.nav-tabs {
         width: 100%;
+        margin-bottom: 10px;
     }
 
+    .box-content .tab-content>.active {
+        float: left;
+        width: 100%;
+        display: block;
+        margin: 0px;
+    }
+}
+
+@media (min-width:800px){
+    .profile-header-photo {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    .profile-header-photo>img {
+        position: absolute;
+        left: -105%;
+        right: -100%;
+        top: -77%;
+        bottom: -85%;
+        margin: auto;
+        min-height: 100%;
+        min-width: 100%;
+        border: 1px solid transparent;
+    }
+    
+    .profile-photo {
+        position: relative;
+        z-index: 10;
+        top: -150px;
+        margin-bottom: -150px;
+    }
+    
+    .profile-pic {
+        width: 20%;
+        height: auto;
+    }
 }
