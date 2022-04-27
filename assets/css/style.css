@@ -77,8 +77,53 @@ body{
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
 }
-/* 346 x 941 */
 
+.box-content .nav.nav-tabs {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    width: 30%;
+    border-bottom: 0;
+    border-right: 3px solid #ddd;
+    padding-right: 15px;
+}
+
+.box-content .nav-tabs .nav-link {
+    border: 1px solid #FEFEFE;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    background: #323232;
+    color: #495057;
+}
+
+.box-content .nav-tabs .nav-link.active {
+    color: #727272;
+    border-color: transparent !important;
+}
+
+.box-content .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0rem !important;
+    border-top-right-radius: 0rem !important;
+}
+
+.box-content .tab-content>.active {
+    display: block;
+    min-height: 165px;
+    color: #FEFEFE;
+    font-size: 1.55em;
+}
+
+.box-content .nav.nav-tabs {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    border-bottom: 0;
+    border-right: 1px solid transparent;
+    padding-right: 15px;
+}
+
+/* 346 x 941 */
 @media (max-width:575px){
     #page-container, .row{
         margin: 0px !important;
@@ -119,6 +164,10 @@ body{
     .profile-pic{
         width: 50%;
         height: auto;
+    }
+
+    .box-content .nav.nav-tabs {
+        width: 100%;
     }
 
 }
