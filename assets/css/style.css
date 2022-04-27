@@ -74,11 +74,42 @@ i{
     padding: 20px;
 }
 
-.box-content span{
+.box-content h3, .box-content h4{
     color: #FEFEFE;
     font-size: 1em;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.post{
+    width: 100%;
+    border-radius: 0.35em;
+    margin-bottom: 10px;
+    background: #313131;
+    padding: 20px;
+}
+
+.postowner{
+    font-size: 1.15em;
+    color: #727272;
+    font-weight: 700;
+    margin-left: 5px;
+    position: relative;
+    top:-5px;
+}
+
+.postime{
+    position: relative;
+    top:-35px;
+    left:63px;
+    font-size: 0.95em;
+    color: #727272;
+}
+
+.post-content{
+    color: #FEFEFE;
+    position: relative;
+    top:-20px;
 }
 
 .box-content .nav.nav-tabs {
@@ -122,7 +153,7 @@ i{
 .tab-content i{
     font-size: 1.45em;
     padding-right: 2%;
-    margin-top: 15px;
+    margin: 10px 0px 5px 0px;
 }
 
 .titlesection{
@@ -146,6 +177,13 @@ i{
     border-bottom: 0;
     border-right: 1px solid transparent;
     padding-right: 15px;
+}
+
+.box-content .rounded-circle{
+    width: 42px;
+    height: 42px;
+    border: 2px solid #727272 !important;
+    margin: 5px;
 }
 
 /* 346 x 941 */
