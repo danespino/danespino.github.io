@@ -1,14 +1,15 @@
-import Icon from './components/ui/Icon'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Alert from './components/ui/Alert'
+import Home from './pages/public/Home'
 
 function App() {
 
   return (
-    <>
-      <Icon name='github' library='bootstrap' size={24} />
-      <Alert variant='error' message='Error' />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
