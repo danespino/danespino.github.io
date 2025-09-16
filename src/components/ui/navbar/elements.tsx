@@ -85,7 +85,7 @@ const NavItem: React.FC<NavItemsProps> = ({
     } else {
         return (
             <div className={`${baseClasses} ${isMenu ? menuItemClasses : navItemClasses }`}>
-                <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`}>
+                <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${!isMenu ? text : ''}`} >
                     { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : ""}`}  /> )}
                     { text && isMenu ? <span className="inline ml-3 xl:text-lg">{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span> }
                 </a>
