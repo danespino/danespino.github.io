@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavItem from './elements';
+import Logo from '../logo';
 
 export default function Navbar() {
     const [width, setWidth] = useState(window.innerWidth);
@@ -19,6 +20,7 @@ export default function Navbar() {
         return (
             <nav id="portfolioBar" className="w-1/12 h-full fixed left-3 justify-center max-w-[280px] border-r border-[#DBDBDB] lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-black dark:border-r dark:border-[#2B2A33]">
                 <div id="tabs" className="flex flex-col justify-start mt-3">
+                    <Logo width={width} />
                     <NavItem icon="bootstrap:house-door" url="/" text="Home" />
                     <NavItem icon="bootstrap:search" url="#" text="Search" />
                     <NavItem icon="bootstrap:browser-safari" url="#" text="Explore" />
@@ -42,8 +44,8 @@ export default function Navbar() {
     }
 
     return (
-        <nav id="portfolioBar" className="fixed top top-0">
-            <img src="/public/images/logo.png" alt="" width={100} height={100} />
+        <nav id="portfolioBar" className="fixed w-full top top-0 z-50 bg-white border-b border-[#343434]">
+            <Logo isotype width={80} height={25} />
         </nav>
     )
 }
