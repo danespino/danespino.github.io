@@ -14,6 +14,7 @@ export default function Navbar() {
         className="w-1/12 h-full fixed left-3 justify-center max-w-[280px] border-r border-[#DBDBDB] lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-black dark:border-r dark:border-[#2B2A33]"
       >
         <div id="tabs" className="flex flex-col justify-start mt-3">
+          <Logo />
           <NavItem icon="bootstrap:house-door" url="/" text="Home" />
           <NavItem icon="bootstrap:search" url="#" text="Search" />
           <NavItem icon="bootstrap:browser-safari" url="#" text="Explore" />
@@ -42,7 +43,7 @@ export default function Navbar() {
       id="portfolioBar"
       className="fixed w-full top-0 z-50 bg-white border-b border-[#343434] dark:bg-black dark:border-[#2B2A33]"
     >
-      <Logo isotype width={80} height={25} />
+      <Logo />
     </nav>
   );
 }

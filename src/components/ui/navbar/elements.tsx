@@ -48,9 +48,9 @@ const NavItem: React.FC<NavItemsProps> = ({
     const isMenu = useContext(NavMenuContext);
 
     const baseClasses = "w-full text-black inline-flex pt-4 pb-4 dark:text-white focus:text-slate-500";
-    const navItemClasses = (text ? "lg:px-2 xl:px-4 xl:w-11/12 justify-center rounded lg:justify-start my-0 " : "");
-    const menuItemClasses = "w-11/12 text-black inline-flex px-5 py-2 rounded lg:px-6 lg:py-3 lg:-my-1 dark:text-white focus:text-slate-500 dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300";
-    const navAItemClasses = "xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap lg:px-6 lg:py-3 lg:-my-1";
+    const navItemClasses = (text ? "lg:px-2 xl:px-4 xl:w-11/12 justify-center rounded lg:justify-start my-0 hover:bg-[#CCC]" : "");
+    const menuItemClasses = "w-11/12 text-black inline-flex px-5 py-2 rounded lg:px-6 lg:py-3 lg:-my-1 hover:bg-[#CCC] dark:text-white focus:text-slate-500 dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300";
+    const navAItemClasses = "xl:w-11/12 rounded hover:bg-[#CCC] dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap lg:px-6 lg:py-3 lg:-my-1";
     const menuAItemClasses = "xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap lg:px-6 lg:py-2 lg:-my-0.5";
     const iconInfo = iconLocator(icon);
     const sizeIconBar = iconSize ? iconSize : "1.75rem";
