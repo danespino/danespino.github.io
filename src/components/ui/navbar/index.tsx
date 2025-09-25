@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
       <nav
         id="portfolioBar"
-        className="w-1/12 h-full fixed left-3 justify-center max-w-[280px] border-r border-[#DBDBDB] lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-black dark:border-r dark:border-[#2B2A33]"
+        className="w-1/12 h-full fixed left-3 justify-center max-w-[230px] border-r border-[#DBDBDB] lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-black dark:border-r dark:border-[#2B2A33]"
       >
         <div id="tabs" className="flex flex-col justify-start mt-3">
           <Logo />
