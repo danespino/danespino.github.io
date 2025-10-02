@@ -89,7 +89,10 @@ export const UIProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         };
     }, [theme]);
 
-    const toggleTheme = () => setTheme(theme => (theme === 'dark' ? 'light' : 'dark'));
+    const toggleTheme = () => setTheme( curr => {
+        if(curr === 'system') return resolvedTheme === 'dark' ? 'light' : 'dark';
+        return curr === 'dark' ? 'light' : 'dark';
+    });
 
     const value = useMemo<UIState>(
         () => ({ ...breakPoint, hydrated, themeMode: theme, theme: resolvedTheme, setTheme, toggleTheme }),

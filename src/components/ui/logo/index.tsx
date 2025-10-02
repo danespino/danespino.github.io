@@ -9,7 +9,7 @@ export default function Logo(){
     if(xl) {
         return (
             <div className="flex items-center">
-                <img src="/public/images/logo.svg" className="mb-2" />
+                <img src="/public/images/logo.svg" className="mb-4" />
             </div>
         )
     }
