@@ -62,11 +62,11 @@ const NavItem: React.FC<NavItemsProps> = ({
     const isMenu = useContext(NavMenuContext);
 
     const baseClasses = "w-full text-black inline-flex pt-3 pb-3 focus:text-slate-500";
-    const navItemClasses = (text ? "lg:px-2 xl:px-4 lg:w-full justify-center rounded lg:justify-start my-1" : "");
-    const menuItemClasses = "w-11/12 inline-flex px-5 py-2 mr-1 rounded lg:px-6 lg:py-3 lg:-my-0 hover:bg-[#CCC] focus:text-slate-500 dark:text-white dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300";
+    const navItemClasses = (text ? "lg:px-1 xl:px-4 lg:w-full justify-center rounded lg:justify-start my-1" : "");
+    const menuItemClasses = "w-11/12 inline-flex px-5 py-2 mr-1 rounded lg:px-1 lg:py-3 lg:-my-0 hover:bg-[#CCC] focus:text-slate-500 dark:text-white dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300";
     const navAItemClasses = "px-4 py-2 xl:w-11/12 rounded hover:bg-[#CCC] dark:hover:bg-[#1A1A1A] xl:text-nowrap lg:px-6 lg:py-3 lg:-my-1";
-    const menuAItemClasses = "xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap lg:px-6 lg:py-2 lg:-my-0.5";
-    const menuButtonItemClasses = "xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap lg:px-4 lg:py-2 lg:-my-0.5";
+    const menuAItemClasses = "xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:text-white dark:hover:text-slate-300 xl:text-nowrap lg:px-4 lg:py-2 lg:-my-0.5";
+    const menuButtonItemClasses = "flex lg:inline-block xl:w-11/12 rounded dark:hover:bg-[#1A1A1A] dark:hover:text-slate-300 xl:text-nowrap px-0 -ml-3 lg:ml-1 lg:px-3 lg:py-2 lg:-my-0.5";
     const iconInfo = iconLocator(icon);
     const sizeIconBar = iconSize ? iconSize : "1.75rem";
     const sizeIconMenu = iconSize ? (typeof iconSize === 'number' ? iconSize : iconSize) : "1.5rem";
@@ -138,13 +138,13 @@ const NavItem: React.FC<NavItemsProps> = ({
             <div className={`${baseClasses} ${isMenu ? menuItemClasses : navItemClasses }`}>
                 { type && type == 'button' ? (
                     <Button className={`${isMenu ? menuButtonItemClasses : navAItemClasses} ${className} w-full`} size="small" onClick={(e) => handleClick(e)}>
-                    { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5 lg: mr-1" : ""}`}  /> )}
-                        { text && isMenu ? <span className="inline lg:-ml-0 xl:text-lg">{text}</span> : <span className="hidden xl:inline xl:pl-1 xl:text-xl xl:font-bold">{text}</span> }
+                    { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${inMenu ? "mt-0.5 lg:mr-0" : ""}`}  /> )}
+                        { text && isMenu ? <span className="inline md:ml-6 lg:-ml-14 xl:-ml-6 xl:text-lg">{text}</span> : <span className="hidden pl-2 xl:inline xl:text-xl xl:font-bold">{text}</span> }
                     </Button>
                 ):(
                     <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${!isMenu ? text : ''}`} >
-                        { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : ""}`}  /> )}
-                        { text ? (isMenu ? <span className="inline ml-3 xl:text-lg">{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>) : null}
+                        { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : "lg:mr-2"}`}  /> )}
+                        { text ? (isMenu ? <span className={`${inMenu ? 'inline ml-6 xl:text-lg' : 'hidden xl:inline lg:ml-3 xl:text-lg'}`}>{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>):null}
                     </a>
                 )}
             </div>
