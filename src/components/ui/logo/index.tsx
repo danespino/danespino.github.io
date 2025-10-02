@@ -1,42 +1,22 @@
-interface LogoProps {
-    url?:string;
-    isotype?: boolean;
-    width: number;
-    height?: number;
-    altText?: string;
-    className?: string;
-}
+import { useBreakpoint } from "../../../context/UIProvider"
+import Button from "../Button";
 
-const Logo: React.FC<LogoProps> = ({
-    url,
-    isotype = false,
-    width,
-    height,
-    altText,
-    className
-}) => {
-    const logoWidth = (!width) ? 276 : width;
-    const logoHeight = (!height) ? 80 : height;
+export default function Logo(){
+    const { xl, hydrated } = useBreakpoint();
 
-    const baseClasses = "mb-2";
+    if(!hydrated) return null;
 
-    if(!isotype) {
+    if(xl) {
         return (
-            <div className={`${baseClasses} `}>
-                <a href={url ? url : `# ${width}`}>
-                    <img src="/public/images/logo.svg" alt="" width={logoWidth} height={logoHeight} />
-                </a>
+            <div className="flex items-center">
+                <img src="/public/images/logo.svg" className="mb-4" />
             </div>
-        );
-    } else {
-        return (
-            <div className={`${baseClasses} `}>
-                <a href={url ? url : "#"}>
-                    <img src="/public/images/isotype.svg" alt="" width={logoWidth} height={logoHeight} />
-                </a>
-            </div>
-        );
+        )
     }
+    return (
+        <div className="flex justify-around md:justify-center">
+            <img src="/public/images/isotype.svg" className="w-24 h-auto md:w-2/3 md:mb-2" />
+            <Button size="medium" className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700">Sign In</Button>
+        </div>
+    )
 }
-
-export default Logo;

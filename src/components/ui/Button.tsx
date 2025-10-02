@@ -1,10 +1,10 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type MouseEventHandler } from "react";
 
 interface ButtonProps {
     children: ReactNode;
     size?: 'small' | 'medium' | 'large' | 'xlarge';
     variant?: 'primary' | 'secondary' | 'danger' | 'alert' | 'success' | 'primaryOutline' | 'secondaryOutline' | 'dangerOutline' | 'alertOutline' | 'successOutline' | 'dark' | 'outlineDark';
-    onClick?: () => void;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
     className?: string;
     disabled?: boolean;
 }
