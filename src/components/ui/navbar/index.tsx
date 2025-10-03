@@ -23,7 +23,7 @@ export default function Navbar() {
           <NavItem icon="bootstrap:messenger" url="#" text="Messages" />
           <NavItem icon="bootstrap:heart" url="#" text="Notifications" />
           <NavItem icon="bootstrap:plus-square" url="#" text="Create" />
-          <NavItem icon="bootstrap:list" url="#" text="More" className='-mr-4' navMenu>
+          <NavItem icon="bootstrap:list" url="#" text="More" className='w-auto xl:w-[89.5%] lg:ml-3 xl:ml-1.5 xl:pl-1' navMenu>
             <NavItem icon="bootstrap:gear" url="#" text="Settings" />
             <NavItem icon="bootstrap:activity" url="#" text="Your Activity" />
             <NavItem icon="bootstrap:bookmark" url="#" text="Saved" />
@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <nav
       id="portfolioBar"
-      className="fixed w-full top-0 z-50 border-b border-[#343434] dark:border-[#2B2A33]"
+      className="fixed w-full top-0 justify-center z-50 border-b border-[#343434] dark:border-[#2B2A33]"
     >
       <Logo />
     </nav>

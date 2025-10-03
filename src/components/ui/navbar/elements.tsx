@@ -2,6 +2,7 @@ import Icon from "../Icon";
 import { DEFAULT_ICON_LIB } from "../../../constants";
 import React, { useState, useId, useContext } from 'react';
 import Button from "../Button";
+import { useTheme } from '../../../context/UIProvider';
 
 type IconLibrary = 'hero' | 'bootstrap' | 'custom';
 
@@ -60,6 +61,7 @@ const NavItem: React.FC<NavItemsProps> = ({
     const [isOpen, setIsOpen] = useState(false);
     const menuId = useId();
     const isMenu = useContext(NavMenuContext);
+    const { resolvedTheme } = useTheme();
 
     const baseClasses = "w-full text-black inline-flex pt-3 pb-3 focus:text-slate-500";
     const navItemClasses = (text ? "lg:px-1 xl:px-4 lg:w-full justify-center rounded lg:justify-start my-1" : "");
@@ -109,10 +111,18 @@ const NavItem: React.FC<NavItemsProps> = ({
                                 { panel ?  (
                                     <div className="space-y-3">
                                         <div className="flex items-center justify-between px-3">
-                                            <div className="flex justify-around items-center py-2">
-                                                <div className="flex flex-col mr-1.5"><Icon name="chevron-left" library="bootstrap" size={sizeIconMenu} onClick={back} /></div>
-                                                <div className="flex flex-col text-base font-bold opacity-80 truncate ">
+                                            <div className="flex justify-between items-center py-2">
+                                                <div className="mr-1.5"><Icon name="chevron-left" library="bootstrap" size={sizeIconMenu} onClick={back} /></div>
+                                                <div className="text-base font-bold opacity-80 truncate">
                                                     {panelTitle}
+                                                </div>
+                                                <div className="absolute mx-2 right-2">
+                                                    { resolvedTheme == 'dark' ? (
+                                                            <Icon name="moon-fill" library="bootstrap" size={sizeIconMenu} />
+                                                        ) : (
+                                                            <Icon name="sun-fill" library="bootstrap" size={sizeIconMenu} />
+                                                        )
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
@@ -139,10 +149,10 @@ const NavItem: React.FC<NavItemsProps> = ({
                 { type && type == 'button' ? (
                     <Button className={`${isMenu ? menuButtonItemClasses : navAItemClasses} ${className} w-full`} size="small" onClick={(e) => handleClick(e)}>
                     { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${inMenu ? "mt-0.5 lg:mr-0" : ""}`}  /> )}
-                        { text && isMenu ? <span className="inline md:ml-6 lg:-ml-14 xl:-ml-6 xl:text-lg">{text}</span> : <span className="hidden pl-2 xl:inline xl:text-xl xl:font-bold">{text}</span> }
+                        { text && isMenu ? <span className="inline md:ml-6 lg:-ml-14 xl:-ml-8 xl:text-lg">{text}</span> : <span className="hidden pl-2 xl:inline xl:text-xl xl:font-bold">{text}</span> }
                     </Button>
                 ):(
-                    <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${!isMenu ? text : ''}`} >
+                    <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${!inMenu ? text : ''}`} >
                         { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : "lg:mr-2"}`}  /> )}
                         { text ? (isMenu ? <span className={`${inMenu ? 'inline ml-6 xl:text-lg' : 'hidden xl:inline lg:ml-3 xl:text-lg'}`}>{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>):null}
                     </a>
