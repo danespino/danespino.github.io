@@ -13,7 +13,7 @@ export default function Logo(){
         )
     }
     return (
-        <div>
+        <div className="flex justify-around md:justify-center">
             <img src="/public/images/isotype.svg" className="w-24 h-auto md:w-2/3 md:mb-2" />
         </div>
     )
