@@ -2,6 +2,7 @@ import NavItem from './elements';
 import Logo from '../logo';
 import { useBreakpoint } from '../../../context/UIProvider';
 import ThemePanel from './panel/themePanel';
+import Button from "../Button";
 
 export default function Navbar() {
   const { md, hydrated } = useBreakpoint(); // md = ≥768px, hydrated = client-ready
@@ -44,7 +45,10 @@ export default function Navbar() {
       id="portfolioBar"
       className="fixed w-full top-0 z-50 border-b border-[#343434] dark:border-[#2B2A33]"
     >
-      <Logo />
+      <div className="flex justify-around md:justify-center">
+        <Logo />
+        <Button size="medium" className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700">Sign In</Button>
+      </div>
     </nav>
   );
 }
