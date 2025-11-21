@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
       <nav
         id="portfolioBar"
-        className="w-1/12 h-full fixed left-3 justify-center max-w-[330px] border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:border-[#262626]"
+        className="w-1/12 h-full sticky left-3 justify-center max-w-[330px] min-h-screen border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:border-[#262626]"
       >
         <div id="tabs" className="flex flex-col justify-start mt-3">
           <Logo />
@@ -54,7 +54,7 @@ export default function Navbar() {
   return (
     <nav
       id="portfolioBar"
-      className="fixed w-full top-0 z-50 border-b border-[#343434] dark:border-[#2B2A33]"
+      className="sticky w-full top-0 z-50 border-b border-[ min-h-screen#343434] dark:border-[#2B2A33]"
     >
       <div className="flex justify-around md:justify-center">
         <Logo />
