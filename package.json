@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure/msal-browser": "^4.26.2",
+    "@azure/msal-react": "^3.0.22",
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
