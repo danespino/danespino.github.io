@@ -3,11 +3,13 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-reac
 import NavItem from './elements';
 import Logo from '../logo';
 import { useBreakpoint } from '../../../context/UIProvider';
+import { useAuth } from '../../../context/AuthProvider';
 import ThemePanel from './panel/themePanel';
 import Button from "../Button";
 
 export default function Navbar() {
   const { md, hydrated } = useBreakpoint(); // md = ≥768px, hydrated = client-ready
+  const { loginWithProvider } = useAuth();
 
   if (!hydrated) return null; // prevents SSR mismatch flashes
 
@@ -63,7 +65,8 @@ export default function Navbar() {
           {/* <Button size="medium">Heart</Button> */}
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
-          <Button size="medium" className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700">Sign In</Button>
+          <Button size="medium" onClick={()=>loginWithProvider("Microsoft")}
+          className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700">Sign In</Button>
         </UnauthenticatedTemplate>
       </div>
     </nav>
