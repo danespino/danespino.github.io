@@ -1,9 +1,18 @@
 import { createContext, useContext, useMemo, type ReactNode } from 'react';
 import { useMsal, useIsAuthenticated } from '@azure/msal-react';
 import type { AccountInfo } from '@azure/msal-browser';
-import { loginRequest } from '../services/msalConfig';
+import { defaultLoginRequest, getLoginRequestIdP, type SupportedProvider } from '../services/msalConfig';
 
-export type AppRole = "Owner" | "Recruiter";
+const { VITE_ROLE_OWNER_VAL, VITE_ROLE_RECRUIT_VAL } = import.meta.env;
+
+if(!VITE_ROLE_OWNER_VAL || !VITE_ROLE_RECRUIT_VAL){
+    throw new Error("Missing environment variables");
+}
+
+const owner_role = VITE_ROLE_OWNER_VAL;
+const recruiter_role = VITE_ROLE_RECRUIT_VAL;
+
+export type AppRole = typeof owner_role | typeof recruiter_role;
 export type IdentityProviders = "Microsoft" | "Google" | "Facebook" | "Instagram" | "LinkedIn";
 
 interface AuthUser {
@@ -36,9 +45,9 @@ export function AuthProvider({ children }: { children: ReactNode; }){
     }, [accounts]);
 
     const roles: AppRole[] = useMemo(() => {
-        if(!activeAccount) return [];
-        const roles = activeAccount.idTokenClaims?.roles as AppRole[] ?? [];
-        return roles;
+        const claims = activeAccount?.idTokenClaims as any;
+        if (!claims?.roles) return [];
+        return (claims.roles as string[]) as AppRole[];
     }, [activeAccount]);
 
     const user: AuthUser | null = useMemo(() => {
@@ -53,19 +62,24 @@ export function AuthProvider({ children }: { children: ReactNode; }){
         };
     }, [activeAccount]);
 
-    const login = () => instance.loginRedirect(loginRequest);
-    const loginWithProvider = (_provider: IdentityProviders) => instance.loginRedirect(loginRequest);
+    const login = () => instance.loginRedirect(defaultLoginRequest);
+    const loginWithProvider = (provider: IdentityProviders) => {
+        const loginRequest = getLoginRequestIdP(provider as SupportedProvider);
+        instance.loginRedirect(loginRequest);
+    }
 
     const logout = () => instance.logoutRedirect({
         postLogoutRedirectUri: "/",
     });
+
+    const hasRole = (role: AppRole) => roles.includes(role);
 
     const contextValue: AuthContextValue = {
         isAuthenticated,
         isLoading: inProgress !== 'none',
         user,
         roles,
-        hasRole: (role: AppRole) => roles.includes(role),
+        hasRole,
         login,
         loginWithProvider,
         logout

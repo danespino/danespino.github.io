@@ -8,6 +8,11 @@ const {
     VITE_MSAL_TENANT_DOMAIN,
     VITE_MSAL_SIGNIN_POLICY,
     VITE_MSAL_AUTH_HOST,
+    VITE_MSAL_IDP_MICROSOFT,
+    VITE_MSAL_IDP_GOOGLE,
+    VITE_MSAL_IDP_FACEBOOK,
+    VITE_MSAL_IDP_INSTAGRAM,
+    VITE_MSAL_IDP_LINKEDIN
 } = import.meta.env;
 
 if(!VITE_MSAL_CLIENT_ID) {
@@ -74,10 +79,37 @@ export const msalConfig:Configuration = {
   },
 };
 
-export const loginRequest = {
+export const defaultLoginRequest = {
     scopes: ["openid", "profile", "offline_access"],
+    extraQueryParameters: {
+        p: VITE_MSAL_SIGNIN_POLICY,
+    }
 };
 
 export const apiRequest = {
     scopes: ["openid"],
+}
+
+export const IdPHints = {
+    Microsoft: VITE_MSAL_IDP_MICROSOFT,
+    Google: VITE_MSAL_IDP_GOOGLE,
+    Facebook: VITE_MSAL_IDP_FACEBOOK,
+    Instagram: VITE_MSAL_IDP_INSTAGRAM,
+    Linkedin: VITE_MSAL_IDP_LINKEDIN
+} as const;
+
+export type SupportedProvider = keyof typeof IdPHints;
+
+export function getLoginRequestIdP(provider: SupportedProvider){
+    const idp = IdPHints[provider];
+    if(!idp){
+        return defaultLoginRequest;
+    }
+
+    return {
+        scopes: ["openid", "profile", "offline_access"],
+        extraQueryParameters: {
+            idp,
+        }
+    }
 }
