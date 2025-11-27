@@ -9,7 +9,7 @@ import Button from "../Button";
 
 export default function Navbar() {
   const { md, hydrated } = useBreakpoint(); // md = ≥768px, hydrated = client-ready
-  const { loginWithProvider } = useAuth();
+  const { loginWithProvider, isLoading, logout } = useAuth();
 
   if (!hydrated) return null; // prevents SSR mismatch flashes
 
@@ -44,7 +44,7 @@ export default function Navbar() {
             <AuthenticatedTemplate>
               <hr className="w-full border-t-6 border-[#DBDBDB] dark:border-[#343434]" />
               <NavItem url="#" text="Switch Accounts" />
-              <NavItem url="#" text="Log Out" />
+              <NavItem onClick={()=>logout()} disabled={isLoading} text="Log Out" />
             </AuthenticatedTemplate>
           </NavItem>
         </div>
