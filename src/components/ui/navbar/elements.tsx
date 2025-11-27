@@ -23,6 +23,7 @@ interface NavItemsProps {
     onClick?: () => void;
     children?: React.ReactNode;
     renderPanel?: () => React.ReactNode;
+    disabled?: boolean;
 }
 
 const iconLocator = (iconLocation?: string) => {
@@ -55,7 +56,8 @@ const NavItem: React.FC<NavItemsProps> = ({
     iconSize,
     onClick,
     children,
-    renderPanel
+    renderPanel,
+    disabled = false
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuId = useId();
@@ -142,10 +144,16 @@ const NavItem: React.FC<NavItemsProps> = ({
                         { text && isMenu ? <span className="inline md:ml-6 lg:-ml-14 xl:-ml-6 xl:text-lg">{text}</span> : <span className="hidden pl-2 xl:inline xl:text-xl xl:font-bold">{text}</span> }
                     </Button>
                 ):(
-                    <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${!isMenu ? text : ''}`} >
-                        { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : "lg:mr-2"}`}  /> )}
-                        { text ? (isMenu ? <span className={`${inMenu ? 'inline ml-6 xl:text-lg' : 'hidden xl:inline lg:ml-3 xl:text-lg'}`}>{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>):null}
-                    </a>
+                    (!disabled) ? 
+                        <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className}`} title={`${inMenu ? '' : text}`}>
+                            { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : "lg:mr-2"}`}  /> )}
+                            { text ? (isMenu ? <span className={`${inMenu ? 'inline ml-6 xl:text-lg' : 'hidden xl:inline lg:ml-3 xl:text-lg'}`}>{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>):null}
+                        </a>
+                    :
+                        <a href={url} className={`${isMenu ? menuAItemClasses : navAItemClasses} ${className} cursor-not-allowed`} title={`${inMenu ? '' : text}`} onClick={(e)=>{e.preventDefault();}}>
+                            { icon && iconInfo && ( <Icon name={iconInfo.name} library={iconInfo.library} size={ isMenu ? sizeIconMenu : sizeIconBar} className={`float-start ${isMenu ? "mt-0.5" : "lg:mr-2"}`}  /> )}
+                            { text ? (isMenu ? <span className={`${inMenu ? 'inline ml-6 xl:text-lg' : 'hidden xl:inline lg:ml-3 xl:text-lg'}`}>{text}</span> : <span className="hidden xl:inline xl:pl-4 xl:text-xl xl:font-bold">{text}</span>):null}
+                        </a>
                 )}
             </div>
         )
