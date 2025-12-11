@@ -12,11 +12,11 @@ export default function Profile() {
   let iconSize = (lg) ? 24 : 16;
 
   const tabs = [
-    { id:'projects', title: 'Projects', icon: 'hero-outline/code-bracket', 
-      content: <>This is content for projects</>},
-    { id:'about', title: 'About', icon: 'hero-outline/qr-code', },
-    { id:'posts', title: 'Posts', icon: 'bootstrap/postcard-fill',},
-    { id:'contact', title: 'Contact'}
+    { id:'general', title: 'Personal Information', icon: 'bootstrap/person-badge', 
+      content: <>This will display personal info</>},
+    { id:'projects', title: 'Projects', icon: 'bootstrap/code-square', },
+    { id:'posts', title: 'Posts', icon: 'bootstrap/tags-fill',},
+    { id:'reels', title: 'Reels', icon: 'bootstrap/film',}
   ];
   
   return (
