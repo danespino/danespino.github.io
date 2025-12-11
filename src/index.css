@@ -17,6 +17,9 @@ svg [data-tbox], .tbox {
 }
 
 @theme {
+  --color-primary:#4150F7;
+  --color-darktheme:#0b0b0b;
+
   --animate-lens-orbit: lens-orbit 2800ms linear infinite;
 
   @keyframes lens-orbit {

@@ -17,7 +17,7 @@ export default function Navbar() {
     return (
       <nav
         id="portfolioBar"
-        className="w-1/12 h-full sticky left-3 justify-center max-w-[330px] min-h-screen border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:border-[#262626]"
+        className="w-1/12 bg-white h-full sticky left-3 justify-center max-w-[330px] min-h-screen border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-darktheme dark:border-[#262626]"
       >
         <div id="tabs" className="flex flex-col justify-start mt-3">
           <Logo />
@@ -32,7 +32,7 @@ export default function Navbar() {
           <AuthenticatedTemplate>
             <NavItem icon="bootstrap:plus-square" url="#" text="Create" />
           </AuthenticatedTemplate>
-          <NavItem icon="bootstrap:person-circle" url="#" text="Profile" />
+          <NavItem icon="bootstrap:person-circle" url="profile" text="Profile" />
           <NavItem icon="bootstrap:list" url="#" text="More" className='-mr-4' navMenu>
             <AuthenticatedTemplate>
               <NavItem icon="bootstrap:gear" url="#" text="Settings" />
@@ -56,7 +56,7 @@ export default function Navbar() {
   return (
     <nav
       id="portfolioBar"
-      className="sticky w-full top-0 z-50 border-b border-[ min-h-screen#343434] dark:border-[#2B2A33]"
+      className="sticky w-full bg-white top-0 z-50 border-b border-[ min-h-screen#343434] dark:bg-darktheme dark:border-[#2B2A33]"
     >
       <div className="flex justify-around md:justify-center">
         <Logo />
