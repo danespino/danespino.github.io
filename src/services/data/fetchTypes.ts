@@ -19,3 +19,53 @@ export type FetchResult<T> = | {
     appMode?: AppModes;
     rawError?: unknown;
 };
+
+export type AppData = {
+    meta: {
+        schemaVersion: number;
+        generatedAt: string;
+        cacheTtlSeconds?: number;
+    };
+    appStatus: {
+        mode: AppModes;
+        message?: string;
+    };
+    profile: {
+        displayName: string;
+        headline?: string;
+        location?: string;
+        summary?: string;
+        social?: Array<{ label: string; url: string }>;
+        certifications?: Array<{
+            name: string;
+            issuer?: string;
+            date?: string;
+            credentialUrl?: string;
+        }>;
+        skills?: {
+            primary?: string[];
+            secondary?: string[];
+        };
+    };
+    posts: {
+        preloadedLimit: number;
+        items: Array<{
+            id: string;
+            createdAt: string;
+            type: string;
+            title?: string;
+            caption?: string;
+            tags?: string[];
+            media?: Array<{ kind: 'image' | 'video'; src: string; alt?: string }>;
+            links?: Array<{ label: string; url: string }>;
+        }>;
+    };
+    tabs: Array<{
+        id: string;
+        label: string;
+        icon?: string;
+        component: 'ProfileComponent' | 'ProjectsGrid' | 'PostsGrid' | 'ReelsTab';
+        dataPath?: string; // This will help to walk the array to pass info to components
+        props?: Record<string, unknown>;
+    }>;
+};

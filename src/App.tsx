@@ -22,7 +22,19 @@ function App() {
     );
   }
 
-  switch (appStatus?.mode) {
+  if (!appStatus) {
+    return (
+      <UIProvider>
+        <UnderConstruction />
+      </UIProvider>
+    );
+  }
+
+  const mode = "mode" in appStatus ? appStatus.mode : appStatus.appStatus.mode;
+  const message =
+    "mode" in appStatus ? appStatus.message : appStatus.appStatus.message;
+
+  switch (mode) {
     case "under_construction":
       return (
         <UIProvider>
@@ -30,7 +42,11 @@ function App() {
         </UIProvider>
       );
     case "maintenance":
-      return <h1 className="font-bold text-2xl">{appStatus.message}</h1>;
+      return (
+        <h1 className="font-bold text-2xl">
+          {message ?? "Site is under maintenance."}
+        </h1>
+      );
     case "production":
     default:
       break;
