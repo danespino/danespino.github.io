@@ -10,33 +10,53 @@
   },
   "profile": {
     "headline": "Full Stack Developer | React | Node.js | Laravel | Azure AI, Functions & WebApps Engineer",
-    "location": "El Salvador",
-    "location-code": "sv",
     "summary": "I build scalable apps with a strong DevOps mindset and a love for clean UX.",
-    "social": [
-      { "label": "GitHub", "url": "https://github.com/danespino" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/danespino91/?locale=en_US" }
+    "general": [
+      { "key": "work", "value": "Hermes AI LLC." },
+      { "key": "born", "value": "sv" },
+      { "key": "location", "value": "sv" },
+      { "key": "bdate", "value": "1991-12-17" }
     ],
+    "social": [
+      { "key": "github", "url": "https://github.com/danespino" },
+      { "key": "linkedin", "url": "https://www.linkedin.com/in/danespino91/?locale=en_US" }
+    ],
+    "additional_info": {
+      "fans": 1123,
+      "reviews": 1
+    },
     "certifications": [
       {
-        "name": "AZ-900: Microsoft Certified: Azure Fundamentals",
-        "issuer": "Microsoft",
-        "date": "2025-10-08",
-        "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
-        "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/f6e5fff89733f019"
-      },
+        "Azure": [
+          {
+            "name": "AZ-900: Microsoft Certified: Azure Fundamentals",
+            "issuer": "Microsoft",
+            "date": "2025-10-08",
+            "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+            "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/f6e5fff89733f019"
+          },
+          {
+            "name": "AI-102: Microsoft Certified: Azure AI Engineer Associate",
+            "issuer": "Microsoft",
+            "date": "2025-11-12",
+            "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+            "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/d80ebd7b2e5f5d27"
+          }
+        ]
+      }, 
       {
-        "name": "AI-102: Microsoft Certified: Azure AI Engineer Associate",
-        "issuer": "Microsoft",
-        "date": "2025-11-12",
-        "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
-        "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/d80ebd7b2e5f5d27"
+        "Salesforce": []
       }
     ],
-    "skills": {
-      "primary": ["React", "Node.js", "Laravel", "Azure Functions", "Azure WebApps"],
-      "secondary": ["MySQL", "PostgreSQL", "Cosmos DB", "GitHub Actions", "Docker", "Kubernetes", "N8N"]
-    }
+    "skills": [
+      {"backend": ["Node.JS", "PHP", "Python"]},
+      {"frontend": ["React", "Angular"]},
+      {"databases": ["MySQL", "PostgreSQL", "Cosmos DB"]},
+      {"devops": ["Azure", "AWS", "Docker", "Kubernetes"]},
+      {"Azure": ["Azure Functions", "Azure WebApps", "WordPress on AppService"]},
+      {"IA": ["Azure AI", "Azure Cognitive Services", "Azure Machine Learning"]},
+      {"Automation": ["GitHub Actions", "N8N", "PineCone"]}
+    ]
   },
   "projects": {
     "count": 3,

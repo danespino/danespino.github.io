@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 export type AppModes = 'production' | 'testing' | 'maintenance' | 'under_construction';
 
 export type FetchErrorCode = 'NETWORK_ERROR' | 'TIMEOUT' | 'NOT_FOUND' | 'UNAUTHORIZED' | 'FORBIDDEN'
@@ -19,6 +21,17 @@ export type FetchResult<T> = | {
     appMode?: AppModes;
     rawError?: unknown;
 };
+
+export type TabComponentsType = 'ProfileComponent' | 'ProjectsGrid' | 'PostsGrid' | 'ReelsTab';
+
+export type TabConfig = {
+    id: string;
+    label: string;
+    icon?: ReactNode | string;
+    component?: TabComponentsType | ReactNode | string;
+    dataPath?: string;
+    props?: Record<string, unknown>;
+}
 
 export type AppData = {
     meta: {
@@ -60,12 +73,5 @@ export type AppData = {
             links?: Array<{ label: string; url: string }>;
         }>;
     };
-    tabs: Array<{
-        id: string;
-        label: string;
-        icon?: string;
-        component: 'ProfileComponent' | 'ProjectsGrid' | 'PostsGrid' | 'ReelsTab';
-        dataPath?: string; // This will help to walk the array to pass info to components
-        props?: Record<string, unknown>;
-    }>;
+    tabs: TabConfig[];
 };
