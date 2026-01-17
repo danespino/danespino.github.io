@@ -91,7 +91,7 @@ export default function Profile() {
           </div>
         </div>
       )}
-      <div className="flex flex-col w-11/12 border border-gray-400 rounded-lg justify-center">
+      <div className="flex flex-col w-11/12 border border-[#DBDBDB] dark:border-gray-700 rounded-lg justify-center">
         {tabs && <ProfileTabs tabs={tabs} />}
       </div>
     </div>

@@ -44,7 +44,7 @@ export default function Navbar() {
             icon="bootstrap:list"
             url="#"
             text="More"
-            className="mt-auto floating-button"
+            className="mt-auto ml-[1.5%] w-auto lg:w-11/12 floating-button"
             navMenu
           >
             <AuthenticatedTemplate>
