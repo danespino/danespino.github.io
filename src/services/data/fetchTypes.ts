@@ -44,21 +44,14 @@ export type AppData = {
         message?: string;
     };
     profile: {
-        displayName: string;
+        displayName?: string;
         headline?: string;
         location?: string;
         summary?: string;
-        social?: Array<{ label: string; url: string }>;
-        certifications?: Array<{
-            name: string;
-            issuer?: string;
-            date?: string;
-            credentialUrl?: string;
-        }>;
-        skills?: {
-            primary?: string[];
-            secondary?: string[];
-        };
+        social?: Array<{ key: string; value: string, url: string }>;
+        general?: Array<{ key: string; value: string }>;
+        certifications?: any[];
+        skills?: any[];
     };
     posts: {
         preloadedLimit: number;

@@ -13,13 +13,13 @@
     "summary": "I build scalable apps with a strong DevOps mindset and a love for clean UX.",
     "general": [
       { "key": "work", "value": "Hermes AI LLC." },
-      { "key": "born", "value": "sv" },
-      { "key": "location", "value": "sv" },
+      { "key": "born", "value": "El Salvador" },
+      { "key": "location", "value": "El Salvador" },
       { "key": "bdate", "value": "1991-12-17" }
     ],
     "social": [
-      { "key": "github", "url": "https://github.com/danespino" },
-      { "key": "linkedin", "url": "https://www.linkedin.com/in/danespino91/?locale=en_US" }
+      { "key": "github", "value": "danespino", "url": "https://github.com/danespino" },
+      { "key": "linkedin", "value": "danespino91", "url": "https://www.linkedin.com/in/danespino91/?locale=en_US" }
     ],
     "additional_info": {
       "fans": 1123,
@@ -30,6 +30,7 @@
         "Azure": [
           {
             "name": "AZ-900: Microsoft Certified: Azure Fundamentals",
+            "value": "AZ-900",
             "issuer": "Microsoft",
             "date": "2025-10-08",
             "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
@@ -37,6 +38,7 @@
           },
           {
             "name": "AI-102: Microsoft Certified: Azure AI Engineer Associate",
+            "value": "AI-102",
             "issuer": "Microsoft",
             "date": "2025-11-12",
             "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
@@ -52,10 +54,10 @@
       {"backend": ["Node.JS", "PHP", "Python"]},
       {"frontend": ["React", "Angular"]},
       {"databases": ["MySQL", "PostgreSQL", "Cosmos DB"]},
-      {"devops": ["Azure", "AWS", "Docker", "Kubernetes"]},
-      {"Azure": ["Azure Functions", "Azure WebApps", "WordPress on AppService"]},
-      {"IA": ["Azure AI", "Azure Cognitive Services", "Azure Machine Learning"]},
-      {"Automation": ["GitHub Actions", "N8N", "PineCone"]}
+      {"cloud": ["Azure", "AWS", "Docker", "Kubernetes"]},
+      {"azure": ["Azure Functions", "Azure WebApps", "WordPress on AppService"]},
+      {"aI": ["Azure AI", "Azure Cognitive Services", "Azure Machine Learning"]},
+      {"automation": ["GitHub Actions", "N8N", "PineCone"]}
     ]
   },
   "projects": {

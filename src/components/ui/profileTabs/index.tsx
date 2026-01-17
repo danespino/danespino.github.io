@@ -31,7 +31,7 @@ export const ProfileTabs: React.FC<ProfileTabsProps> = ({
 }) => {
   const initialTabId = defaultTab ?? activeTab;
   const [currentTab, setCurrentTab] = useState<string | undefined>(
-    initialTabId || tabs[0]?.id
+    initialTabId || tabs[0]?.id,
   );
 
   const handleTabClick = (tabId: string) => {
@@ -44,14 +44,16 @@ export const ProfileTabs: React.FC<ProfileTabsProps> = ({
   return (
     <div className={`flex flex-col w-full ${className}`}>
       <div
-        className="flex flex-row w-full items-center justify-center *:px-4 *:mx-3.5 *:mt-1"
+        className="flex flex-row w-full items-center justify-center -mb-2 *:px-4 *:mx-3.5 *:mt-1"
         role="tablist"
       >
         {tabs.map((tab) => (
           <div key={tab.id} className="flex">
             <Button
               className={`bg-transparent font-bold py-0 text-sm lg:px-6 lg:py-2 ${
-                currentTab === tab.id ? "text-blue-500" : ""
+                currentTab === tab.id
+                  ? "text-blue-500 border-b-4 border-b-blue-500"
+                  : ""
               }`}
               onClick={() => handleTabClick(tab.id)}
             >
