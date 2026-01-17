@@ -201,7 +201,7 @@ export default function ({ data }: { data?: Profile }) {
   }
 
   return (
-    <div className="flex w-full mx-2 my-1 px-8 py-2 flex-row items-center dark:bg-contabdark">
+    <div className="flex w-full static z-0 mx-2 my-1 px-8 py-2 flex-row items-center dark:bg-contabdark">
       <div className="flex w-1/3 h-full flex-col border-r border-r-[#e2e8f] pr-2">
         <p className="lg:pl-14 py-4 font-bold text-2xl">Informaci&oacute;n</p>
         <div className="flex flex-row">

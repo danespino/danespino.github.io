@@ -80,3 +80,9 @@ svg [data-tbox],
     animation: none !important;
   }
 }
+
+@media (max-height: 550px) {
+  #portfolioBar .floating-button {
+    display: none;
+  }
+}

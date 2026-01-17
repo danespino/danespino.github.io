@@ -14,7 +14,7 @@ export default function Profile() {
   let iconSize = lg ? 24 : 16;
 
   return (
-    <div className="flex flex-col items-center justify-baseline h-screen w-full">
+    <div className="flex flex-col items-center justify-baseline static w-full">
       <div className="flex flex-row w-10/12 mt-5 justify-center">
         <div className="flex flex-col w-1/3 items-center lg:items-end py-6">
           <img

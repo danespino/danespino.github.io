@@ -66,7 +66,7 @@ const NavItem: React.FC<NavItemsProps> = ({
   const isMenu = useContext(NavMenuContext);
 
   const baseClasses =
-    "w-full text-black inline-flex pt-3 pb-3 focus:text-slate-500";
+    "w-full text-black relative inline-flex pt-3 pb-3 focus:text-slate-500";
   const navItemClasses = text
     ? "lg:px-1 xl:px-4 lg:w-full justify-center rounded lg:justify-start my-1"
     : "";
