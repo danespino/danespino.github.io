@@ -1,0 +1,1 @@
+export const DEFAULT_ICON_LIB = 'bootstrap';        // values: hero or bootstrap

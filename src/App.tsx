@@ -1,35 +1,78 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { UIProvider } from "./context/UIProvider";
+import { AuthProvider } from "./context/AuthProvider";
+import { Layout } from "./layouts/Layout";
+import { LoginPage } from "./pages/public/LoginPage";
+import { AutoTitleManager } from "./components/app/AutoTitleManager";
+
+import Home from "./pages/public/Home";
+import Profile from "./pages/public/Profile";
+import { useAppStatus } from "./hooks/app/useAppStatus";
+import LoadingScreen from "./pages/public/LoadingScreen";
+import UnderConstruction from "./pages/public/appModes/UnderConstruction";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { appStatus, isLoading } = useAppStatus();
+
+  if (isLoading) {
+    return (
+      <UIProvider>
+        <LoadingScreen message="Loading site.." />
+      </UIProvider>
+    );
+  }
+
+  if (!appStatus) {
+    return (
+      <UIProvider>
+        <UnderConstruction />
+      </UIProvider>
+    );
+  }
+
+  const mode = "mode" in appStatus ? appStatus.mode : appStatus.appStatus.mode;
+  const message =
+    "mode" in appStatus ? appStatus.message : appStatus.appStatus.message;
+
+  switch (mode) {
+    case "under_construction":
+      return (
+        <UIProvider>
+          <UnderConstruction />
+        </UIProvider>
+      );
+    case "maintenance":
+      return (
+        <h1 className="font-bold text-2xl">
+          {message ?? "Site is under maintenance."}
+        </h1>
+      );
+    case "production":
+    default:
+      break;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <AuthProvider>
+      <BrowserRouter>
+        <UIProvider>
+          <AutoTitleManager />
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route
+                path="*"
+                element={<h1 className="font-bold text-2xl">Not Found</h1>}
+              />
+            </Route>
+            <Route path="/signin" element={<LoginPage />}></Route>
+          </Routes>
+        </UIProvider>
+      </BrowserRouter>
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
