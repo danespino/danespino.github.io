@@ -5,7 +5,7 @@
     "cacheTtlSeconds": 3600
   },
   "appStatus": {
-    "mode": "production",
+    "mode": "under_construction",
     "message": "This is a an early preview of my portfolio. Things may break or move around. Stay alert"
   },
   "profile": {
