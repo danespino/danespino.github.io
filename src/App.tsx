@@ -4,6 +4,7 @@ import { UIProvider } from "./context/UIProvider";
 import { AuthProvider } from "./context/AuthProvider";
 import { Layout } from "./layouts/Layout";
 import { LoginPage } from "./pages/public/LoginPage";
+import { AutoTitleManager } from "./components/app/AutoTitleManager";
 
 import Home from "./pages/public/Home";
 import Profile from "./pages/public/Profile";
@@ -56,6 +57,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <UIProvider>
+          <AutoTitleManager />
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
