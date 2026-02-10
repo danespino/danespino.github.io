@@ -2,42 +2,87 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html:not(.dark) body { 
-    background-color: #ffffff !important;
-    color: #000 !important;
+html:not(.dark) body {
+  background-color: #ffffff !important;
+  color: #000 !important;
 }
-html.dark body { 
-    background-color: #0b0b0b !important; 
-    color: #F5F5F5 !important;
+html.dark body {
+  background-color: #0b0b0b !important;
+  color: #f5f5f5 !important;
 }
 
 /* Make SVG transforms behave around their own bounds */
-svg [data-tbox], .tbox {
+svg [data-tbox],
+.tbox {
   transform-box: fill-box; /* crucial for SVG transform-origin to work */
 }
 
 @theme {
+  --color-primary: #4150f7;
+  --color-darktheme: #0b0b0b;
+  --color-tabdark: #232535;
+
+  --color-contabdark: #252728; /* this makes contrast in tab component */
+  --color-contab: #d0d3d7;
+
+  --color-hvtabdark: #233a52;
+  --color-hvtab: #f2f2f2;
+
+  --color-hvtxtabdark: #437bbb;
+  --color-txtabdark: #777a7b;
+
+  --color-lnktab: #005ec6;
+  --color-lnktabdark: #6ab0ff;
+
+  /* #8D949E */
+  /* #64686C */
+
   --animate-lens-orbit: lens-orbit 2800ms linear infinite;
 
   @keyframes lens-orbit {
     /* Start: reverse spin */
-    0%   { transform: rotate(0deg)   scale(1); }
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
 
     /* 50%: has completed a half turn CCW (reverse) */
-    50%  { transform: rotate(-180deg) scale(0.75); }
+    50% {
+      transform: rotate(-180deg) scale(0.75);
+    }
 
     /* 75%: switched to CW (+), add a brief “breath” */
-    75%  { transform: rotate(90deg)  scale(1.15); }
+    75% {
+      transform: rotate(90deg) scale(1.15);
+    }
 
     /* 100%: end back in reverse orientation, scale normal */
-    100% { transform: rotate(-360deg) scale(1); }
+    100% {
+      transform: rotate(-360deg) scale(1);
+    }
 
-    0%, 50% { animation-timing-function: ease-in-out; }
-    50%, 75% { animation-timing-function: ease-out; }
-    75%, 100% { animation-timing-function: ease-in; }
-  }  
+    0%,
+    50% {
+      animation-timing-function: ease-in-out;
+    }
+    50%,
+    75% {
+      animation-timing-function: ease-out;
+    }
+    75%,
+    100% {
+      animation-timing-function: ease-in;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-lens-orbit { animation: none !important; }
+  .animate-lens-orbit {
+    animation: none !important;
+  }
+}
+
+@media (max-height: 550px) {
+  #portfolioBar .floating-button {
+    display: none;
+  }
 }

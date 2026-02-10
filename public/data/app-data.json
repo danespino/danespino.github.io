@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generatedAt": "2025-12-28T00:00:00.000Z",
+    "cacheTtlSeconds": 3600
+  },
+  "appStatus": {
+    "mode": "under_construction",
+    "message": "This is a an early preview of my portfolio. Things may break or move around. Stay alert"
+  },
+  "profile": {
+    "headline": "Full Stack Developer | React | Node.js | Laravel | Azure AI, Functions & WebApps Engineer",
+    "summary": "I build scalable apps with a strong DevOps mindset and a love for clean UX.",
+    "general": [
+      { "key": "work", "value": "Hermes AI LLC." },
+      { "key": "born", "value": "El Salvador" },
+      { "key": "location", "value": "El Salvador" },
+      { "key": "bdate", "value": "1991-12-17" }
+    ],
+    "social": [
+      { "key": "github", "value": "danespino", "url": "https://github.com/danespino" },
+      { "key": "linkedin", "value": "danespino91", "url": "https://www.linkedin.com/in/danespino91/?locale=en_US" }
+    ],
+    "additional_info": {
+      "fans": 1123,
+      "reviews": 1
+    },
+    "certifications": [
+      {
+        "Azure": [
+          {
+            "name": "AZ-900: Microsoft Certified: Azure Fundamentals",
+            "value": "AZ-900",
+            "issuer": "Microsoft",
+            "date": "2025-10-08",
+            "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+            "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/f6e5fff89733f019"
+          },
+          {
+            "name": "AI-102: Microsoft Certified: Azure AI Engineer Associate",
+            "value": "AI-102",
+            "issuer": "Microsoft",
+            "date": "2025-11-12",
+            "credentialBadge": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+            "credentialUrl": "https://learn.microsoft.com/en-us/users/danielantonioespinoaguilar-6447/credentials/d80ebd7b2e5f5d27"
+          }
+        ]
+      }, 
+      {
+        "Salesforce": [
+          {
+            "name": "Salesforce Platform App Builder",
+            "value": "Salesforce Platform App Builder",
+            "issuer": "Salesforce",
+            "date": "2022-10-22",
+            "credentialBadge": "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAEmf&oid=00DF0000000gZsu&lastMod=1746780791000",
+            "credentialUrl": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+          },
+          {
+            "name": "Salesforce Certified Platform Foundations",
+            "value": "Salesforce Certified Platform Foundations",
+            "issuer": "Salesforce",
+            "date": "2023-05-19",
+            "credentialBadge": "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA6fO&oid=00DF0000000gZsu&lastMod=1746782543000",
+            "credentialUrl": "https://drive.google.com/file/d/1g6YdWRZp8bgba4K8GzJBIViDJAonYfnK/view?usp=sharing"
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {"backend": ["Node.JS", "PHP", "Python"]},
+      {"frontend": ["React", "Angular"]},
+      {"databases": ["MySQL", "PostgreSQL", "Cosmos DB"]},
+      {"cloud": ["Azure", "AWS", "Docker", "Kubernetes"]},
+      {"azure": ["Azure Functions", "Azure WebApps", "WordPress on AppService"]},
+      {"aI": ["Azure AI", "Azure Cognitive Services", "Azure Machine Learning"]},
+      {"automation": ["GitHub Actions", "N8N", "PineCone"]}
+    ]
+  },
+  "projects": {
+    "count": 3,
+    "detail": [
+      {
+        "hash": "51d20b36-f00a-492d-a4f9-5e1724b8cb11",
+        "timestamp": "2024-01-02T00:00:00.000Z",
+        "title": "BillBlaster API & Admin Panel",
+        "caption": "Developed API for Mobile App (BillBlaster) and Admin Panel for a 3rd Party ().",
+        "stacks": ["Laravel", "Livewire", "Javascript Vanilla"]
+      },
+      {
+        "hash": "424cce9f-9ef8-42b9-b151-80f5722552c3",
+        "timestamp": "2024-02-02T00:00:00.000Z",
+        "title": "MyGymDate BackEnd & Admin Panel",
+        "caption": "Developed API for Mobile Social Network and Admin Panel for a 3rd Party (MyGymDate App).",
+        "stacks": ["Laravel", "Livewire", "Javascript Vanilla"]
+      },
+      {
+        "hash": "0874bf41-ac6b-4866-9c89-61e06a041754",
+        "timestamp": "2025-08-24T12:33:00.000Z",
+        "title": "InstantFolio (Portfolio Feed Instagram-like)",
+        "caption": "Instagram-like experience with other cool stuff to demostrate my skills.",
+        "stacks": ["React", "Node.JS", "Azure"]
+      }
+    ]
+  },
+  "reels": {
+    "count": 1,
+    "detail": [
+      {
+        "hash": "0874bf41-ac6b-4866-9c89-61e06a041754",
+        "timestamp": "2025-08-24T12:33:00.000Z",
+        "title": "InstantFolio (Portfolio Feed Instagram-like)",
+        "caption": "Instagram-like experience with other cool stuff to demostrate my skills.",
+        "stacks": ["React", "Node.JS", "Azure"]
+      }
+    ]
+  },
+  "posts": {
+    "preloadedLimit": 9,
+    "items": [
+      {
+        "id": "p_001",
+        "createdAt": "2025-12-20T12:30:00.000Z",
+        "type": "project_update",
+        "title": "Portfolio feed prototype",
+        "caption": "Instagram-like grid with filters + fast load.",
+        "tags": ["portfolio", "frontend", "ux", "functions"],
+        "media": [
+          {
+            "kind": "image",
+            "src": "/media/posts/p_001_cover.webp",
+            "alt": "Preview of portfolio feed"
+          }
+        ],
+        "links": [
+          { "label": "Repo", "url": "https://github.com/danespino/..." }
+        ]
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "id": "profile",
+      "label": "Personal Information",
+      "icon": "bootstrap/person-badge",
+      "component": "ProfileComponent",
+      "dataPath": "profile"
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "icon": "bootstrap/code-square",
+      "component": "ProjectsGrid",
+      "dataPath": "projects.detail"
+    },
+    {
+      "id": "posts",
+      "label": "Posts",
+      "icon": "bootstrap/tags-fill",
+      "component": "PostsGrid",
+      "dataPath": "posts.items",
+      "props": { "limit": 9 }
+    },
+    {
+      "id": "reels",
+      "label": "Reels",
+      "icon": "bootstrap/film",
+      "component": "ReelsTab",
+      "dataPath": "reels.detail"
+    }
+  ]
+}

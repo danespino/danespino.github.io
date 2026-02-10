@@ -1,10 +1,13 @@
-import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react';
+import {
+  AuthenticatedTemplate,
+  UnauthenticatedTemplate,
+} from "@azure/msal-react";
 
-import NavItem from './elements';
-import Logo from '../logo';
-import { useBreakpoint } from '../../../context/UIProvider';
-import { useAuth } from '../../../context/AuthProvider';
-import ThemePanel from './panel/themePanel';
+import NavItem from "./elements";
+import Logo from "../logo";
+import { useBreakpoint } from "../../../context/UIProvider";
+import { useAuth } from "../../../context/AuthProvider";
+import ThemePanel from "./panel/themePanel";
 import Button from "../Button";
 
 export default function Navbar() {
@@ -17,7 +20,7 @@ export default function Navbar() {
     return (
       <nav
         id="portfolioBar"
-        className="w-1/12 h-full sticky left-3 justify-center max-w-[330px] min-h-screen border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:border-[#262626]"
+        className="w-1/12 bg-white fixed z-50 left-0 bottom-0 mb-2 justify-center max-w-[330px] h-lvh border-r border-[#DBDBDB] md:float-left lg:pr-5 lg:pl-3 lg:justify-start lg:w-1/12 xl:w-3/6 dark:bg-darktheme dark:border-[#262626]"
       >
         <div id="tabs" className="flex flex-col justify-start mt-3">
           <Logo />
@@ -32,19 +35,42 @@ export default function Navbar() {
           <AuthenticatedTemplate>
             <NavItem icon="bootstrap:plus-square" url="#" text="Create" />
           </AuthenticatedTemplate>
-          <NavItem icon="bootstrap:person-circle" url="#" text="Profile" />
-          <NavItem icon="bootstrap:list" url="#" text="More" className='-mr-4' navMenu>
+          <NavItem
+            icon="bootstrap:person-circle"
+            url="profile"
+            text="Profile"
+          />
+          <NavItem
+            icon="bootstrap:list"
+            url="#"
+            text="More"
+            className="mt-auto ml-[1.5%] w-auto lg:w-11/12 floating-button"
+            navMenu
+          >
             <AuthenticatedTemplate>
               <NavItem icon="bootstrap:gear" url="#" text="Settings" />
               <NavItem icon="bootstrap:activity" url="#" text="Your Activity" />
               <NavItem icon="bootstrap:bookmark" url="#" text="Saved" />
-            </AuthenticatedTemplate>            
-            <NavItem icon="bootstrap:moon" type='button' text="Switch Appearance" renderPanel={()=><ThemePanel />} />
-            <NavItem icon="bootstrap:exclamation-triangle" url="#" text="Report a problem" />
+            </AuthenticatedTemplate>
+            <NavItem
+              icon="bootstrap:moon"
+              type="button"
+              text="Switch Appearance"
+              renderPanel={() => <ThemePanel />}
+            />
+            <NavItem
+              icon="bootstrap:exclamation-triangle"
+              url="#"
+              text="Report a problem"
+            />
             <AuthenticatedTemplate>
               <hr className="w-full border-t-6 border-[#DBDBDB] dark:border-[#343434]" />
               <NavItem url="#" text="Switch Accounts" />
-              <NavItem onClick={()=>logout()} disabled={isLoading} text="Log Out" />
+              <NavItem
+                onClick={() => logout()}
+                disabled={isLoading}
+                text="Log Out"
+              />
             </AuthenticatedTemplate>
           </NavItem>
         </div>
@@ -56,7 +82,7 @@ export default function Navbar() {
   return (
     <nav
       id="portfolioBar"
-      className="sticky w-full top-0 z-50 border-b border-[ min-h-screen#343434] dark:border-[#2B2A33]"
+      className="sticky w-full bg-white top-0 z-50 border-b border-[ min-h-screen#343434] dark:bg-darktheme dark:border-[#2B2A33]"
     >
       <div className="flex justify-around md:justify-center">
         <Logo />
@@ -65,8 +91,13 @@ export default function Navbar() {
           {/* <Button size="medium">Heart</Button> */}
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
-          <Button size="medium" onClick={()=>loginWithProvider("Microsoft")}
-          className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700">Sign In</Button>
+          <Button
+            size="medium"
+            onClick={() => loginWithProvider("Microsoft")}
+            className="block h-12 mt-3 border-3 border-red-600 rounded-lg bg-red-800 font-extrabold text-white md:hidden hover:bg-red-700"
+          >
+            Sign In
+          </Button>
         </UnauthenticatedTemplate>
       </div>
     </nav>
