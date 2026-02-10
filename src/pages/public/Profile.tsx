@@ -18,7 +18,7 @@ export default function Profile() {
       <div className="flex flex-row w-10/12 mt-5 justify-center">
         <div className="flex flex-col w-1/3 items-center lg:items-end py-6">
           <img
-            src="./images/profile_pic.jpg"
+            src="./images/597496f1a876093fcf3063b2f3dbc01f.jpg"
             className="rounded-full"
             width={250}
             height={250}

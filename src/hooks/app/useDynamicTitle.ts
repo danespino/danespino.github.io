@@ -94,6 +94,8 @@ export function useDynamicTitle(options: DynamicTitleOptions): DynamicTitleAPI {
             if (!hidden) {
                 setFlashVisibleKick((n) => n + 1);
             }
+            flashVisibleKick;
+            isHidden;
         };
         document.addEventListener('visibilitychange', onVis);
         return () => document.removeEventListener('visibilitychange', onVis);
