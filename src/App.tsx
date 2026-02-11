@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { UIProvider } from "./context/UIProvider";
 import { AuthProvider } from "./context/AuthProvider";
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <UIProvider>
           <AutoTitleManager />
           <Routes>
@@ -70,7 +70,7 @@ function App() {
             <Route path="/signin" element={<LoginPage />}></Route>
           </Routes>
         </UIProvider>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
