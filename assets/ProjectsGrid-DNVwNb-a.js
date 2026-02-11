@@ -1,0 +1,1 @@
+import{j as e}from"./index-UPrkqxTK.js";function s(){return e.jsxs("div",{className:"flex flex-col my-1 py-2 items-center justify-center",children:[e.jsx("img",{src:"/images/working.svg",width:256,height:256}),e.jsx("h1",{className:"text-4xl font-bold text-center",children:"Under Construction"})]})}export{s as default};
